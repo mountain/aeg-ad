@@ -1,0 +1,44 @@
+[project]
+name = "aegad"
+version = "0.1.0"
+description = "AEG-AD Phase 1 reference implementation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["aegad*"]
+exclude = ["docs*", "specs*"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6", "mypy>=1.8", "torch", "torchvision"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.mypy]
+python_version = "3.10"
+exclude = "^(tests|examples|benchmarks)/"
+strict = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+warn_return_any = true
+no_implicit_optional = true
+disallow_any_generics = true
+disallow_subclassing_any = false
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["aegad.core.dual"]
+disable_error_code = ["override"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

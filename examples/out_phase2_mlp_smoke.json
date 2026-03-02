@@ -1,0 +1,17 @@
+{
+  "model": "TinyMlp",
+  "method": "dual",
+  "alpha": 0.1,
+  "mu": 1.0,
+  "lam": 0.1,
+  "rows": [
+    {
+      "epoch": 1,
+      "train_data_loss": 0.6778589487075806,
+      "train_reg": 0.1957521261294683,
+      "train_acc": 0.8143833333333333,
+      "test_acc": 0.9161,
+      "elapsed_s": 1.0465119579748716
+    }
+  ]
+}

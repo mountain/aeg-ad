@@ -1,0 +1,20 @@
+[
+  {
+    "mode": "baseline",
+    "epoch": 1,
+    "train_loss": 2.3089629411697388,
+    "train_acc": 0.09375,
+    "test_acc": 0.099609375,
+    "elapsed_s": 0.03297333299997263,
+    "images_per_s": 3881.924826953534
+  },
+  {
+    "mode": "dual",
+    "epoch": 1,
+    "train_loss": 2.3089890480041504,
+    "train_acc": 0.09375,
+    "test_acc": 0.099609375,
+    "elapsed_s": 0.023265291005373,
+    "images_per_s": 5501.757960836984
+  }
+]
